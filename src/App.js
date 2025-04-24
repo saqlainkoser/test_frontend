@@ -14,7 +14,7 @@ function App() {
 
   const fetchMessage = async () => {
     try {
-      const response = await fetch('http://localhost:3001/');
+      const response = await fetch('https://test-backend-m7ev.onrender.com/');
       const data = await response.json();
       console.log(data.message);
       setMessage(data.message);
@@ -29,7 +29,7 @@ function App() {
     setLoading(true);
     
     try {
-      const response = await fetch('http://localhost:3001/api/greet', {
+      const response = await fetch('https://test-backend-m7ev.onrender.com/api/greet', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
